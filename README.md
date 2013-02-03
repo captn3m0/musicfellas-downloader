@@ -12,3 +12,9 @@ For eg:
 
 This script will download all songs by that artist in the folder Music. All the
 songs should be properly id3 tagged.
+
+#Requirements
+1. `php-cli`
+
+#Licence
+Licenced under MIT. Feel free to use.
