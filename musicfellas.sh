@@ -1,8 +1,8 @@
 #!/bin/bash
 artist=$1
-mkdir Music
+mkdir -p Music
 wget "http://musicfellas.com/artists/$artist.json" -O /tmp/musicfellas.json
 php list.php > /tmp/musicfellas.txt
 cd Music
-cat /tmp/musicfellas.txt | xargs -L1 axel
-echo "Songs downloaded to ./Music"
+for i in `cat /tmp/musicfellas.txt` ; do axel $i;done
+echo "Songs downloaded to Music directory"
